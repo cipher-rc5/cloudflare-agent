@@ -1,0 +1,17 @@
+[{
+  "name": "<character_name>",
+  "modelProvider": "<model_provider>",
+  "modelName": "<model_name>",
+  "character": {
+    "settings": { "voice": { "model": "<voice_model>" } },
+    "bio": ["<character_bio>"],
+    "lore": ["<lore_description_1>", "<lore_description_2>"],
+    "knowledge": ["<knowledge_area_1>", "<knowledge_area_2>", "<knowledge_area_3>"],
+    "style": {
+      "all": ["<style_all_1>", "<style_all_2>", "<style_all_3>"],
+      "chat": ["<style_chat_1>", "<style_chat_2>", "<style_chat_3>"],
+      "post": ["<style_post_1>", "<style_post_2>", "<style_post_3>"]
+    },
+    "adjectives": ["<adjective_1>", "<adjective_2>", "<adjective_3>", "<adjective_4>"]
+  }
+}]

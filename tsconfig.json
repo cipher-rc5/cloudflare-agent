@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "types": ["@cloudflare/workers-types/2023-07-01", "@types/bun"],
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": false,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    // Bundler mode
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    // "verbatimModuleSyntax": true,
+    "noEmit": true,
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    // Some stricter flags
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": true
+  },
+  "exclude": ["test", "node_modules"],
+  "include": ["worker-configuration.d.ts", "src/**/*.ts"]
+}

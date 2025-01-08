@@ -1,0 +1,28 @@
+{
+  "name": "cloudflare-stitch",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.5.2",
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "@types/bun": "^1.1.15",
+    "typescript": "^5.5.2",
+    "vitest": "2.1.8",
+    "wrangler": "^3.60.3"
+  },
+  "dependencies": {
+    "@farcaster/hub-nodejs": "^0.12.7",
+    "@scalar/hono-api-reference": "^0.5.165",
+    "hono": "^4.6.16",
+    "openai": "^4.77.3",
+    "openapi3-ts": "^4.4.0",
+    "viem": "^2.22.4"
+  }
+}
