@@ -1,5 +1,5 @@
 {
-  "name": "cloudflare-stitch",
+  "name": "cloudflare-agent",
   "version": "0.0.0",
   "private": true,
   "scripts": {
