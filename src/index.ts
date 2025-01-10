@@ -6,8 +6,6 @@ import { Env } from './types';
 
 import { AIService } from './services/ai.service';
 
-import { createFarcasterTestHandler } from '../test/farcaster-test';
-
 import { apiReference } from '@scalar/hono-api-reference';
 import { openApiSpec } from './hosted-api';
 
@@ -205,8 +203,5 @@ app.get('/docs', apiReference({ theme: 'purple', spec: { url: '/openapi.json' },
 app.get('/openapi.json', (c) => {
   return c.json(openApiSpec);
 });
-
-// farcaster test
-app.post('/test-farcaster', createFarcasterTestHandler());
 
 export default app;

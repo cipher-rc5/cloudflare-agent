@@ -1,5 +1,5 @@
 
-name = "cloudflare-stitch"
+name = "cloudflare-agent"
 main = "src/index.ts"
 compatibility_date = "2024-12-30"
 compatibility_flags = ["nodejs_compat"]
@@ -12,7 +12,3 @@ mode = "smart"
 
 [ai]
 binding = "AI"
-
-[[kv_namespaces]]
-binding = "CHARACTERS"
-id = "6ba0a9b00d4d46bc9108599661ed4c15"

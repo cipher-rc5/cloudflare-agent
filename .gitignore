@@ -170,3 +170,9 @@ dist
 
 .dev.vars
 .wrangler/
+.aider*
+bun.lockb
+.prettierrc
+wrangler.toml
+worker-configuration.d.ts
+node_modules
