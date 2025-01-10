@@ -1,0 +1,28 @@
+{
+  "cipher-frame": {
+    "agent": {
+      "core": {
+        "config.json": "Core Configuration: LLM, AI-Framework, Model-Provider",
+        "system.js": "Role & Identity Logic",
+        "infrastructure": "Blockchain, deployment infrastructure"
+      },
+      "settings": {
+        "secrets.json": "api keys and sensitive info - entered as encrypted secrets",
+        "intervals.json": "poll/post intervals",
+        "voice.json": "voice settings"
+      },
+      "personality": {
+        "bio.json": "agent persona",
+        "lore.json": "background story",
+        "adjectives.json": "personality traits",
+        "topics.json": "content themes"
+      },
+      "style": { "chat.json": "chat styles", "post.json": "post styles" },
+      "knowledge": { "expertise.json": "knowledge base ingest" },
+      "interactions": { "message-examples.json": "Q&A templates", "post-examples.json": "social media posts to mimic" },
+      "clients": { "twitter-client": "twitter integration" },
+      "plugins": { "plugin-loader": "plugin management" },
+      "actions": { "action-loader": "action managerment" }
+    }
+  }
+}

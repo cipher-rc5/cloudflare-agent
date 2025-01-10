@@ -1,6 +1,6 @@
 // src/types.ts
 
-import { ModelProvider } from './config/models.config';
+import { ModelProvider } from '../config/models.config';
 
 export interface CharacterVoice {
   model: string;
@@ -19,11 +19,27 @@ export interface CharacterDefinition {
   adjectives: string[];
 }
 
+// export interface Character {
+//   name: string;
+//   modelProvider: ModelProvider;
+//   modelName: string; // The specific model name (e.g., 'gpt-3.5-turbo', 'llama-3.1-8b-instruct')
+//   character: CharacterDefinition;
+// }
+
 export interface Character {
   name: string;
   modelProvider: ModelProvider;
-  modelName: string; // The specific model name (e.g., 'gpt-3.5-turbo', 'llama-3.1-8b-instruct')
-  character: CharacterDefinition;
+  modelName: string;
+  character: {
+    settings: { voice: { model: string } },
+    bio: string[],
+    lore: string[],
+    knowledge: string[],
+    style: { all: string[], chat: string[], post: string[] },
+    adjectives: string[]
+  };
+  modules: [];
+  plugins: [];
 }
 
 export interface Env {
@@ -40,5 +56,10 @@ export interface Env {
   FARCASTER_FID: string;
   FARCASTER_NEYNAR_SIGNER_UUID: string;
   FARCASTER_NEYNAR_API_KEY: string;
+  TWITTER_USERNAME: string;
+  TWITTER_PASSWORD: string;
+  TWITTER_EMAIL: string;
+  TWITTER_PROXY_URL?: string;
+  TWITTER_API_KEY?: string;
   CHARACTERS: KVNamespace;
 }

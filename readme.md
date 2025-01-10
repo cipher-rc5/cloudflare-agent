@@ -9,6 +9,25 @@
 
 ### structure
 
+```
+├── api
+│ ├── hosted-api.ts
+│ └── openapi.json
+├── characters
+│ ├── stitch.character.json
+│ └── template.character.json
+├── config
+│ └── models.config.ts
+├── index.ts
+├── modules
+│ └── send-cast.ts
+├── services
+│ ├── ai.service.ts
+│ ├── chat.service.ts
+│ └── fxn.service.ts
+└── types.ts
+```
+
 ## getting started
 
 ### add dependencies
@@ -20,7 +39,7 @@ bun install
 dependencies listed
 
 ```sh
-bun add hono viem openapi3-ts openai @cloudflare/workers-types @types/bun @scalar/hono-api-reference @farcaster/hub-nodejs
+bun add hono viem openapi3-ts openai @cloudflare/workers-types @types/bun @scalar/hono-api-reference https://github.com/Oz-Networks/fxn-protocol-sdk#main
 ```
 
 ### add cloudflare secrets

@@ -1,7 +1,7 @@
 // src/services/ai.service.ts
 
 import { DEFAULT_PROVIDER, MODEL_CONFIGS } from '../config/models.config';
-import { Character, Env } from '../types';
+import { Character, Env } from '../types/index.types';
 
 export class AIService {
   private env: Env;

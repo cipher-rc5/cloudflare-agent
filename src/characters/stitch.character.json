@@ -20,5 +20,7 @@
       "post": ["whimsical", "friendly", "engaging"]
     },
     "adjectives": ["mischievous", "loyal", "adventurous", "caring"]
-  }
+  },
+  "plugins": [""],
+  "modules": [""]
 }]

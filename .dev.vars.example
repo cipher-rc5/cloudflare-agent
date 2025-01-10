@@ -1,0 +1,152 @@
+
+# Example Development Environment Variables
+
+##########################################################################
+# KEEP THESE CREDENTIAL PRIVATE; DO NOT COMMIT TO GIT OR SHARE EXTERNALLY
+##########################################################################
+# Unit not deployed, as we are using Cloudflare Secrets; simply for local testing and debugging purposes
+
+
+#####################################
+# Server Configuration
+#####################################
+# Port on which the server can run for local testing purposes
+SERVER_PORT=8785
+
+#####################################
+# Cloudflare Configuration
+#####################################
+
+# Cloudflare API Token (Required for Cloudflare integrations)
+CF_API_TOKEN=                               # Documentation: https://developers.cloudflare.com/api/
+
+# Workers AI Configuration
+CF_WORKERS_AI_KEY=                          # AI Key for Cloudflare Workers
+CF_WORKERS_ID=                              # Workers Tag ID
+
+# Optional - Cloudflare AI Gateway Configuration (Highly Recommended)
+CF_AI_GATEWAY_ID=                           # Custom AI Gateway Identifier
+CF_AI_GATE_KEY=                             # API Key for the Custom AI Gateway
+
+#####################################
+# Cache Configuration
+#####################################
+# Cache Store Type: Options - database, redis, filesystem (default: database)
+CACHE_STORE=database            
+REDIS_URL=                                  # Redis URL (e.g., redis://localhost:6379)
+
+#####################################
+# Discord Bot Configuration
+#####################################
+DISCORD_APPLICATION_ID=                     # Your Discord Application ID
+DISCORD_API_TOKEN=                          # Discord Bot Token
+DISCORD_VOICE_CHANNEL_ID=                   # Optional Voice Channel ID
+
+#####################################
+# AI Model Configuration
+#####################################
+# OpenAI Settings
+OPENAI_API_KEY=                             # OpenAI API Key (sk-...)
+OPENAI_API_URL=https://api.openai.com/v1    # Optional custom API URL
+SMALL_OPENAI_MODEL=gpt-4o-mini              # Default small model
+MEDIUM_OPENAI_MODEL=gpt-4o                  # Default medium model
+LARGE_OPENAI_MODEL=gpt-4o                   # Default large model
+EMBEDDING_OPENAI_MODEL=text-embedding-3-small
+IMAGE_OPENAI_MODEL=dall-e-3
+
+# EternalAI Inference API
+ETERNALAI_URL=
+ETERNALAI_MODEL="neuralmagic/Meta-Llama-3.1-405B-Instruct-quantized.w4a16"
+ETERNALAI_API_KEY=
+ETERNAL_AI_LOG_REQUEST=false                # Enable logging of API requests (default: false)
+
+#####################################
+# Social Media Integrations
+#####################################
+# Twitter/X Configuration
+TWITTER_DRY_RUN=false
+TWITTER_USERNAME=
+TWITTER_PASSWORD=
+TWITTER_EMAIL=
+TWITTER_PROXY_URL=
+TWITTER_2FA_SECRET=
+TWITTER_COOKIES=
+
+# Set the interval for Twitter polling (in seconds)
+TWITTER_POLL_INTERVAL=120                   # How often (in seconds) the bot should check for interactions       
+TWITTER_SEARCH_ENABLE=false                 # Enable timeline search, WARNING greatly increases your chance of getting banned
+
+TWITTER_TARGET_USERS=                       # Comma separated list of Twitter user names to interact with
+TWITTER_RETRY_LIMIT=                        # Maximum retry attempts for Twitter login
+TWITTER_SPACES_ENABLE=false                 # Enable or disable Twitter Spaces logic
+
+# Post Interval Settings (in minutes)
+POST_INTERVAL_MIN=                          # Default: 90
+POST_INTERVAL_MAX=                          # Default: 180
+POST_IMMEDIATELY=
+
+# Twitter action processing configuration
+ACTION_INTERVAL=                            # Interval in minutes between action processing runs (default: 5 minutes)
+ENABLE_ACTION_PROCESSING=false              # Set to true to enable the action processing loop
+
+
+# Farcaster Neynar Configuration
+FARCASTER_FID=                              # The FID associated with the account your are sending casts from
+FARCASTER_NEYNAR_API_KEY=                   # Neynar API key: https://neynar.com/
+FARCASTER_NEYNAR_SIGNER_UUID=               # Signer for the account you are sending casts from. Create a signer here: https://dev.neynar.com/app
+FARCASTER_DRY_RUN=false                     # Set to true if you want to run the bot without actually publishing casts
+FARCASTER_POLL_INTERVAL=120                 # How often (in seconds) the bot should check for farcaster interactions (replies and mentions)
+
+
+#####################################
+# Telegram Bot Configuration
+#####################################
+TELEGRAM_BOT_TOKEN=
+
+#####################################
+# Blockchain Configurations
+#####################################
+# Ethereum
+EVM_PUBLIC_ADDRESS=
+EVM_PRIVATE_KEY=
+EVM_PROVIDER_URL=
+
+# Solana
+SOLANA_PRIVATE_KEY=
+SOLANA_PUBLIC_KEY=
+RPC_URL=https://api.mainnet-beta.solana.com
+SLIPPAGE=1
+
+# ZKsync Era
+ZKSYNC_ADDRESS=
+ZKSYNC_PRIVATE_KEY=
+
+# Sui
+SUI_PRIVATE_KEY=
+SUI_NETWORK=mainnet                         # Options: mainnet, testnet, devnet, localnet
+
+#####################################
+# AWS S3 Configuration
+#####################################
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=
+AWS_S3_BUCKET=
+AWS_S3_UPLOAD_PATH=
+
+
+#####################################
+# Web search API Configuration
+#####################################
+TAVILY_API_KEY=
+
+
+#####################################
+# References and Notes
+#####################################
+# Additional Example Reference Source ElizaOS: https://github.com/elizaOS/eliza/blob/main/.env.example 
+# For Cloudflare Workers AI Key: https://developers.cloudflare.com/ai/
+# For Redis URL formats: https://redis.io/docs/
+# For OpenAI API documentation: https://platform.openai.com/docs/
+# For EternalAI documentation: https://eternalai.com/docs/
+# For Solana RPC details: https://docs.solana.com/rpc

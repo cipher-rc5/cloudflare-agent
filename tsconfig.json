@@ -3,7 +3,7 @@
     "target": "ESNext",
     "lib": ["ESNext"],
     "module": "ESNext",
-    "types": ["@cloudflare/workers-types/2023-07-01", "@types/bun"],
+    "types": ["@cloudflare/workers-types", "@types/bun"],
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": false,
@@ -22,7 +22,8 @@
     // Some stricter flags
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noPropertyAccessFromIndexSignature": true
+    "noPropertyAccessFromIndexSignature": true,
+    "jsx": "react"
   },
   "exclude": ["test", "node_modules"],
   "include": ["worker-configuration.d.ts", "src/**/*.ts"]

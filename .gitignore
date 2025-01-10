@@ -176,3 +176,4 @@ bun.lockb
 wrangler.toml
 worker-configuration.d.ts
 node_modules
+notes.md
