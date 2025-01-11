@@ -1,4 +1,15 @@
-# Cloudflare Stitch
+# Cloudflare Agent
+
+## Prerequisites
+
+Ensure you have the following set up:
+
+1. **[Bun](https://bun.sh)**: Install via:
+   ```sh
+   curl https://bun.sh/install | bash
+   ```
+2. Node.js, npm, or Yarn is not required as Bun serves as an all-in-one runtime.
+3. Secretlist is utilized to reduce likelihood of unexpected credential leakage
 
 ## functionalities
 
@@ -24,6 +35,7 @@
 ├── services
 │ ├── ai.service.ts
 │ ├── chat.service.ts
+│ ├── proxy.service.ts
 │ └── fxn.service.ts
 └── types.ts
 ```
@@ -39,7 +51,9 @@ bun install
 dependencies listed
 
 ```sh
-bun add hono viem openapi3-ts openai @cloudflare/workers-types @types/bun @scalar/hono-api-reference https://github.com/Oz-Networks/fxn-protocol-sdk#main
+bun add hono viem openapi3-ts openai @cloudflare/workers-types @types/bun @scalar/hono-api-reference
+bun add -D secretlint @secretlint/secretlint-rule-preset-recommend
+bunx secretlint --init
 ```
 
 ### add cloudflare secrets
