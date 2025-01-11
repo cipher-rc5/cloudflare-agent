@@ -6,7 +6,7 @@
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
     "start": "wrangler dev",
-    "frontend:dev": "bun run --hot frontend/index.tsx",
+    "frontend:dev": "bun run --hot frontend/index.tsx --serve",
     "frontend:build": "bun build frontend/index.tsx --outdir dist --target browser",
     "css:build": "bunx tailwindcss -i frontend/styles.css -o dist/styles.css --minify",
     "build": "bun run css:build && bun run frontend:build",

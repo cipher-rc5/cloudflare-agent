@@ -17,6 +17,7 @@ Ensure you have the following set up:
 2. List all characters (both default and custom): GET /characters
 3. Delete custom characters: DELETE /characters/:name
 4. Generate responses with any character: POST /generate
+5. A self-hosted frontend for the unit will be incorporated soon
 
 ### structure
 
@@ -48,12 +49,43 @@ Ensure you have the following set up:
 bun install
 ```
 
-dependencies listed
+#### main dependencies
 
 ```sh
 bun add hono viem openapi3-ts openai @cloudflare/workers-types @types/bun @scalar/hono-api-reference
+```
+
+#### secretlint dependency
+
+```sh
 bun add -D secretlint @secretlint/secretlint-rule-preset-recommend
 bunx secretlint --init
+```
+
+#### frontend dependencies
+
+```sh
+bun add react react-dom reactflow @xyflow/react @types/react @types/react-dom
+```
+
+#### frontend(optional)
+
+install tailwindcss, used for styling [tailwind documentation reference](https://tailwindcss.com/docs/installation)
+
+```sh
+bun add -D tailwindcss
+```
+
+initialize tailwindcss configuration
+
+```sh
+bunx tailwindcss init
+```
+
+copy `tailwind.config.js` into your root directory
+
+```js
+module.exports = { content: ['./dist/**/*.{tsx,ts,jsx,js}', './dist/index.html'], theme: { extend: {} }, plugins: [] };
 ```
 
 ### add cloudflare secrets
